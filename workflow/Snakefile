@@ -50,12 +50,6 @@ rule all:
 		#expand("metaxa2/{sample}.level_6.txt", sample=SAMPLES),
 		#"metaxa2/metaxa_genus.txt"
 
-# ***DO NOT UNCOMMENT! For downsampling sequence data only!***
-rule all:
- 	input:
- 		 expand("trimmed_data/z{sample}_R1_trimmed.fastq.gz", sample=SAMPLES),
- 		 expand("trimmed_data/z{sample}_R2_trimmed.fastq.gz", sample=SAMPLES)
-
 # This runs FastQC, a tool for performing quality control (QC) on raw sequencing data.
 # 	--quiet: This suppresses some of the verbose output that FastQC normally produces.
 #	-t {threads}: This specifies the number of threads to use for the analysis.
